@@ -23,7 +23,7 @@ public class CurrencyExchangeController {
     @GetMapping("/currency-exchange/from/{from}/to/{to}")
     public ExchangeValue retrieveExchangeValue(@PathVariable String from, @PathVariable String to)  //from map to USD and to map to INR
     {
-        logger.info( "retrieveExchangeValue method" );
+        logger.info( "retrieveExchangeValue method github" );
         int x = ThreadLocalRandom.current().nextInt(1, 100 );
         return new  ExchangeValue(1000L, from, to, BigDecimal.valueOf( x ), Integer.parseInt( environment.getProperty( "local.server.port" ) ));
     }
